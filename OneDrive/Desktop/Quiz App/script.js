@@ -146,36 +146,47 @@ function startTimer(duration) {
 }
 
 // Function to handle option selection
+// Function to handle option selection
 function optionSelected(answer) {
     clearInterval(timerInterval);
     const userAns = answer.textContent.trim();
     const correctAns = questions[queCount].answer;
     const options = document.querySelectorAll(".option");
-    let userSelected = true;
-    if (!answer.classList.contains("correct") && !answer.classList.contains("incorrect")) {
-        if (userAns === correctAns) {
-            answer.classList.add("correct");
-            answer.innerHTML += '<i class="fas fa-check"></i>';
-            console.log("Correct Answer");
-            userScore += 1;
-            console.log("Your Correct Answers: " + userScore);
-            userSelected = true;
-        } else {
-            answer.classList.add("incorrect");
-            answer.innerHTML += '<i class="fas fa-times"></i>';
-            console.log("Wrong Answer");
-            options.forEach(option => {
-                if (option.textContent.trim() === correctAns) {
-                    option.classList.add("correct");
-                    option.innerHTML += '<i class="fas fa-check"></i>';
-                    console.log("Auto selected correct answer");
-                }
-            });
-        }
+    
+    // Check if the option has already been selected
+    if (answer.classList.contains("disabled")) {
+        return; // Exit the function if the option is already disabled (i.e., already selected)
     }
+
+    let userSelected = false; // Flag to track if the user has selected an option
+    
+    // Check if the selected answer is correct or incorrect
+    if (userAns === correctAns) {
+        answer.classList.add("correct");
+        answer.innerHTML += '<i class="fas fa-check"></i>';
+        console.log("Correct Answer");
+        userScore += 1;
+        console.log("Your Correct Answers: " + userScore);
+        userSelected = true;
+    } else {
+        answer.classList.add("incorrect");
+        answer.innerHTML += '<i class="fas fa-times"></i>';
+        console.log("Wrong Answer");
+        // Auto-select the correct answer
+        options.forEach(option => {
+            if (option.textContent.trim() === correctAns) {
+                option.classList.add("correct");
+                option.innerHTML += '<i class="fas fa-check"></i>';
+                console.log("Auto selected correct answer");
+            }
+        });
+    }
+    
+    // Disable all options to prevent multiple clicks
     options.forEach(option => {
         option.classList.add("disabled");
     });
+    
     if (!userSelected) {
         nextBtn.classList.add("show");
     }
