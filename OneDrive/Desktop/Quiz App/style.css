@@ -1,0 +1,358 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+    --prime-color: #0fa4af;
+    --second-color: #afdde5;
+    --white-color: #fff;
+    --free-color: #024950;
+    --deepFree-color: #003135;
+    --black-color: #000;
+    --light-color: #964734;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%; /* Setting base font size to 10px */
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-image: url(./images/Default_Craft_a_spellbinding_series_of_background_images_where_1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+img {
+    width: 100%;
+}
+
+.container {
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.s-btn button {
+    padding: 1.5rem 3rem;
+    background-color: var(--white-color);
+    color: var(--prime-color);
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+    font-size: 3rem;
+    transition: background-color 0.3s;
+}
+
+.s-btn button:hover {
+    background-color: var(--prime-color);
+    color: var(--white-color);
+}
+
+.info-box h1 {
+    background-color: var(--prime-color);
+    color: var(--white-color);
+    text-align: center;
+    font-size: 3rem;
+    padding: 1rem 0;
+    width: 100%;
+    margin-bottom: 1.5rem;
+    border-radius: 4px;
+}
+
+.info-box p {
+    color: var(--deepFree-color);
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.info-box {
+    width: 100%;
+    background-color: var(--white-color);
+    padding: 2rem;
+    border: 3px solid var(--prime-color);
+    border-radius: 0.8rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+}
+
+.info-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: var(--deepFree-color);
+}
+
+
+.info {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    color: var(--deepFree-color);
+}
+
+.info span {
+    font-weight: 600;
+    color: var(--prime-color);
+}
+
+.buttons {
+    margin-top: 2rem;
+}
+
+button {
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 1.6rem;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: red;
+}
+
+.quit {
+    background-color: var(--light-color);
+    color: var(--white-color);
+}
+
+.restart {
+    margin-left: 1rem;
+    color: var(--deepFree-color);
+}
+
+.restart:hover {
+    background-color: var(--prime-color);
+    color: var(--white-color);
+}
+
+.quiz-box {
+    display: none;
+    width: 100%;
+    background-color: var(--white-color);
+    padding: 2rem;
+    border: 3px solid var(--prime-color);
+    border-radius: 0.8rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title {
+    font-size: 2.7rem;
+    font-weight: 600;
+    color: var(--prime-color);
+}
+
+.timer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 1rem;
+    background-color: var(--second-color);
+    border-radius: 1rem;
+    margin-bottom: 1.2rem;
+}
+
+.time-left {
+    font-size: 1.4rem;
+    color: #777;
+    margin-right: 0.9rem;
+}
+
+.time-sec {
+    font-size: 1.6rem;
+    color: var(--white-color);
+    padding: 0.4rem;
+    background-color: var(--deepFree-color);
+    border-radius: 1rem;
+}
+
+.time-line {
+    height: 0.3rem;
+    background-color: var(--prime-color);
+    width: 100%;
+    border-radius: 0.5rem;
+}
+
+section .que-text {
+    font-size: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 1.8rem;
+}
+
+.option-list button {
+    margin-bottom: 1rem;
+}
+
+.next-btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 1.6rem;
+    transition: background-color 0.3s;
+    margin-top: 1rem;
+    background-color: var(--light-color);
+    color: var(--white-color);
+
+}
+
+.next-btn:hover {
+    background-color: var(--prime-color);
+}
+
+.result-box {
+    display: none;
+    text-align: center;
+    margin-top: 2rem;
+    background-color: var(--white-color);
+    padding: 2rem;
+    border: 3px solid var(--prime-color);
+    border-radius: 0.8rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.icon i {
+    font-size: 6.4rem;
+    color: var(--prime-color);
+}
+
+.complete-text {
+    font-size: 3.4rem;
+    margin-top: 1rem;
+    font-weight: bold;
+    color: var(--deepFree-color);
+}
+
+.score-text {
+    font-size: 2.5rem;
+    color: var(--deepFree-color);
+    font-weight: 500;
+    margin-top: 1rem;
+}
+
+.score-text p {
+    font-size: 2rem;
+    color: var(--prime-color);
+    font-weight: bold;
+}
+
+.result-box button {
+    margin-top: 2rem;
+}
+
+.score-text .failed-score {
+    color: red;
+}
+
+.option {
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 1.5rem;
+    color: var(--deepFree-color);
+    font-weight: 500;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.option:hover {
+    background-color: #e0e0e0;
+}
+
+.option.correct {
+    background-color: #8bc34a; /* Green color for correct option */
+}
+
+.option.incorrect {
+    background-color: #f44336; /* Red color for incorrect option */
+}
+
+
+
+/* Media query for Samsung and iPhone devices */
+@media only screen and (max-width: 767px) {
+    .container {
+        max-width: 90%; /* Adjust container width for smaller screens */
+    }
+
+    .s-btn button {
+        font-size: 2.5rem; /* Decrease button font size for smaller screens */
+        padding: 1.2rem 2.5rem; /* Adjust button padding for smaller screens */
+    }
+
+    .info-box {
+        padding: 1.5rem; /* Adjust padding for smaller screens */
+    }
+
+    .quiz-box {
+        padding: 1.5rem; /* Adjust padding for smaller screens */
+    }
+
+    .title {
+        font-size: 2rem; /* Decrease title font size for smaller screens */
+    }
+
+    .que-text {
+        font-size: 1.8rem; /* Decrease question text font size for smaller screens */
+    }
+
+    .option {
+        font-size: 1.4rem; /* Decrease option text font size for smaller screens */
+        padding: 8px; /* Adjust option padding for smaller screens */
+    }
+
+    .next-btn {
+        font-size: 1.4rem; /* Decrease next button font size for smaller screens */
+        padding: 0.8rem 1.5rem; /* Adjust next button padding for smaller screens */
+    }
+
+    .result-box {
+        padding: 1.5rem; /* Adjust padding for smaller screens */
+    }
+
+    .icon i {
+        font-size: 4.5rem; /* Decrease icon size for smaller screens */
+    }
+
+    .complete-text {
+        font-size: 2.8rem; /* Decrease complete text font size for smaller screens */
+    }
+
+    .score-text {
+        font-size: 2.2rem; /* Decrease score text font size for smaller screens */
+    }
+
+    .score-text p {
+        font-size: 1.8rem; /* Decrease score text font size for smaller screens */
+    }
+
+    .result-box button {
+        margin-top: 1.5rem; /* Adjust margin for buttons in result box for smaller screens */
+    }
+}

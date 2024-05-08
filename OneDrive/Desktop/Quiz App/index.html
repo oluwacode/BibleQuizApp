@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bible Quiz App</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    
+    <!-- Start Quiz Button -->
+
+    <div class="container">
+
+        <div class="s-btn"><button>Start Quiz</button></div>
+
+
+            
+
+        <!-- Info Box -->
+
+        <div class="info-box">
+
+            <h1>Welcome to the Bible Scholar Quiz App</h1>
+            <p>Test your knowledge of the Bible with this interactive quiz!</p>
+            <div class="info-title"><span>Some Rules of this Quiz</span></div>
+            <div class="infolist">
+                <div class="info">1. You will have only <span>15 seconds</span> per each question</div>
+                <div class="info">2. Once you Select your answer, it can't be undone</div>
+                <div class="info">3. You can't select any option once time goes off.</div>
+                <div class="info">4. You can't exit from the Quiz while you're playing.</div>
+                <div class="info">5. You'll get points on the basis of your correct answers.</div>
+            </div>
+    
+            <div class="buttons">
+                <button class = "quit"> Exit Quiz</button>
+                <button class = "restart"> Continue</button>
+            </div>
+    
+        </div>
+    
+        <div class="quiz-box">
+            <header>
+                <div class="title">Bible Scholar Quiz App</div>
+                <div class="timer">
+                    <div class="time-left">Time Left</div>
+                    <div class="time-sec">15</div>
+                </div>
+            </header>
+            <div class="time-line"></div>
+            <section>
+                <div class="que-text">
+                    <!-- This question will be inserted from javascript -->
+                </div>
+                <div class="option-list">
+                     <!-- This options will be inserted from javascript -->
+                </div>
+            </section>
+    
+            <footer>
+                <div class="total-que">
+                    <!-- This question will be inserted from javascript -->
+                </div>
+    
+                <button class="next-btn"> Next</button>
+            </footer>
+        </div>
+    
+    
+        <div class="result-box">
+            <div class="result-box">
+                <div class="icon">
+                    <i class = "fas fa-crown"></i>
+                </div>
+            </div>
+            <div class="complete-text">You've Completed the Quiz!</div>
+            <div class="score-text">
+                <!-- This question will be inserted from javascript -->
+            </div>
+    
+            <div class="buttons">
+                <button class = "restart">Replay Quiz</button>
+                <button class = "quit">Quit Quiz</button>
+            </div>
+            
+        </div>
+    </div>
+    
+    <script src="question.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
