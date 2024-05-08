@@ -22,6 +22,12 @@ exitBtn.onclick = () => {
     window.location.reload(); // Reload the page to quit the quiz
 };
 
+// Function to handle the quit button at the end of the quiz
+const quitQuizButton = resultBox.querySelector(".buttons .quit");
+quitQuizButton.onclick = () => {
+    window.location.reload(); // Reload the page to quit the quiz
+};
+
 // Function to continue the quiz
 continueBtn.onclick = () => {
     quizBox.style.display = "block";
